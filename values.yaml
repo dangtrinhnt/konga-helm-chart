@@ -94,4 +94,18 @@ tolerations: []
 
 affinity: {}
 
-runMigrations: false
+runMigrations: true
+
+migrations:
+  # Annotations to apply to migrations job pods
+  annotations:
+    # These annotations make sure no sidecar container injected into
+    # the migration pods
+    sidecar.istio.io/inject: false
+    consul.hashicorp.com/connect-inject: false
+
+podAnnotations:
+  # These annotations make sure no sidecar contaienr injected into
+  # Konga pods
+  sidecar.istio.io/inject: false
+  consul.hashicorp.com/connect-inject": false
