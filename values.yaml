@@ -108,4 +108,4 @@ podAnnotations:
   # These annotations make sure no sidecar contaienr injected into
   # Konga pods
   sidecar.istio.io/inject: false
-  consul.hashicorp.com/connect-inject": false
+  consul.hashicorp.com/connect-inject: false
